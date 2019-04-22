@@ -66,6 +66,16 @@
 
 
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -96,18 +106,17 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="node.js,express">
+  <meta name="description" content="历4月4日深夜而发。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="写给小白的express学习笔记1： express-static文件静态管理">
-<meta property="og:url" content="http://yoursite.com/2018/06/07/hello-world/index.html">
+<meta property="og:title" content="价格记录">
+<meta property="og:url" content="http://yoursite.com/2019/04/15/DNF价格记录/index.html">
 <meta property="og:site_name" content="Dotown&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="历4月4日深夜而发。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-22T12:32:29.884Z">
+<meta property="og:updated_time" content="2019-04-22T17:11:36.438Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="写给小白的express学习笔记1： express-static文件静态管理">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="价格记录">
+<meta name="twitter:description" content="历4月4日深夜而发。">
 
 
 
@@ -115,7 +124,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2018/06/07/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/15/DNF价格记录/">
 
 
 
@@ -125,7 +134,7 @@
   };
 </script>
 
-  <title>写给小白的express学习笔记1： express-static文件静态管理 | Dotown's Blog</title>
+  <title>价格记录 | Dotown's Blog</title>
   
 
 
@@ -175,7 +184,6 @@
 
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
@@ -239,23 +247,6 @@
     
 
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
         
@@ -341,7 +332,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/15/DNF价格记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dotown">
@@ -358,7 +349,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">写给小白的express学习笔记1： express-static文件静态管理
+          <h1 class="post-title" itemprop="name headline">价格记录
 
               
             
@@ -384,7 +375,7 @@
                 
               
 
-              <time title="创建时间：2018-06-07 00:38:36" itemprop="dateCreated datePublished" datetime="2018-06-07T00:38:36+08:00">2018-06-07</time>
+              <time title="创建时间：2019-04-15 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-15T00:00:00+08:00">2019-04-15</time>
             
 
             
@@ -401,7 +392,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-22 20:32:29" itemprop="dateModified" datetime="2019-04-22T20:32:29+08:00">2019-04-22</time>
+                <time title="修改时间：2019-04-23 01:11:36" itemprop="dateModified" datetime="2019-04-23T01:11:36+08:00">2019-04-23</time>
               
             
           </span>
@@ -418,7 +409,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/备忘录/" itemprop="url" rel="index"><span itemprop="name">备忘录</span></a></span>
 
                 
                 
@@ -435,7 +426,42 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
           
 
           
@@ -453,15 +479,54 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <blockquote>
+<p>历4月4日深夜而发。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="春节套篇"><a href="#春节套篇" class="headerlink" title="春节套篇"></a>春节套篇</h2><p><strong>春节套上架日期为1月21号到4月4号</strong></p>
+<p>春节套上架的当天金币比例为<strong>1比46（上架后35-37）</strong>。（大量玩家及商人用金币套代币，购买春节套）<strong>因此这天备好钱去买金币最为合算。</strong>春节套除了一套装扮宠物，可以交易的有</p>
+<h3 id="1-天命英雄宝珠（9选1宝珠）（排名有先后）（下架后自逐渐走低）：⭐"><a href="#1-天命英雄宝珠（9选1宝珠）（排名有先后）（下架后自逐渐走低）：⭐" class="headerlink" title="1.天命英雄宝珠（9选1宝珠）（排名有先后）（下架后自逐渐走低）：⭐"></a>1.天命英雄宝珠（9选1宝珠）（排名有先后）（下架后自逐渐走低）：⭐</h3><p>​    光之英雄宝珠、暗之英雄宝珠：280w-&gt;340w</p>
+<p>​    钢铁、大地、寒冰之英雄宝珠、暗之圣女宝珠：280w-&gt;370w</p>
+<p>​    暴风之英雄宝珠、光之圣女宝珠：280w-&gt;380w</p>
+<p>​    烈火之英雄宝珠：280w-&gt;480w</p>
+<p><strong>分析：由于在宝珠礼盒9选1时，大量人选择第一个光之英雄宝珠，导致第光之英雄宝珠较其他宝珠的涨幅并不高。</strong></p>
+<h3 id="2-天命英雄特别宝物礼盒（2个）⭐⭐"><a href="#2-天命英雄特别宝物礼盒（2个）⭐⭐" class="headerlink" title="2.天命英雄特别宝物礼盒（2个）⭐⭐"></a>2.天命英雄特别宝物礼盒（2个）⭐⭐</h3><p>开盘为1225w后基本维持在1200w-1300w之间，直至下架之前一天能晚上为1400w（盒子消耗的主要产物为增幅书打红字）</p>
+<h3 id="3-称号（秘境迷踪）"><a href="#3-称号（秘境迷踪）" class="headerlink" title="3.称号（秘境迷踪）"></a>3.称号（秘境迷踪）</h3><p>白板称号市场稳定价格为200w，下架后为245w</p>
+<p>带春节宝珠的市场稳定价格为1850w，最低时期为1700w，更新前一天为2100w，更新后为2400w</p>
+<p>由于春节称号的特殊性，在这加入<strong>国庆称号</strong>的讨论：</p>
+<p>白板国庆称号 春套上架前最高为800w，期间之间跌至300w-，上架后涨至350w，然后稳至300w，下架前一天为350w，下架后为320w-</p>
+<p><strong>分析：大量商人被带节奏，年套前收白板国庆称号，年套上架后，有大量的需求给国庆称号打宝珠，所以白板国庆称号疯涨，工作室因此被套2000元…</strong></p>
+<p>带宝珠国庆称号 年套上架后为2000w，之后稳步（缓慢）上涨至2200w，下架后飙升2800w（4.5最高价3100w）⭐⭐⭐</p>
+<h3 id="4-宠物宝珠礼盒⭐⭐"><a href="#4-宠物宝珠礼盒⭐⭐" class="headerlink" title="4.宠物宝珠礼盒⭐⭐"></a>4.宠物宝珠礼盒⭐⭐</h3><p>市场稳定价格为50w，下架当天为200w-&gt;150w（4.5号、4页）</p>
+<h3 id="5-宠物宝珠变更卷⭐⭐⭐（发家致富项目）"><a href="#5-宠物宝珠变更卷⭐⭐⭐（发家致富项目）" class="headerlink" title="5.宠物宝珠变更卷⭐⭐⭐（发家致富项目）"></a>5.宠物宝珠变更卷⭐⭐⭐（发家致富项目）</h3><p>此物品在春节期间无限倒卖：</p>
+<p>前期：50w-&gt;55w</p>
+<p>后期：53w-&gt;58w</p>
+<p>年套下架后当天为80w，第二天涨至120w。</p>
+<p>随着变更卷的增长：双属强宝珠也疯狂涨价，</p>
+<p>双暗宝珠中期为500w，后期为900w，下架后飙升1500w后缓慢下降（由于鬼泣崛起为幻神，暗属性宝珠需求增高）</p>
+<p>双冰宝珠为1100w，下架后为1900w</p>
+<p>双光宝珠为1000w，下架后为为1850w之后缓慢下降为1750w</p>
+<p>双火宝珠为400w-，下架后为1100w</p>
+<p>PS：商城的变更为2000电卷10张，一次60积分，因此卖变更挂一亿寄售，代币买变更在卖。嫖积分，换翅膀。</p>
+<p><strong>PS：以上时间节点 下架后指4.5号晚上9点。市场有波动，参考需谨慎。</strong></p>
+<h2 id="盒子篇："><a href="#盒子篇：" class="headerlink" title="盒子篇："></a>盒子篇：</h2><p>2019春节以来 透明天空、使徒宝珠、星空票、假增幅、华丽徽章</p>
+<p>2-3.8018年以来</p>
+<p>2.1-3.8 稀有克隆装扮</p>
+<p>3.8-4.5大头装扮和使徒宝珠⭐</p>
+<p>4.5-4.26深渊票</p>
+<p>4.26-5.24灿烂徽章</p>
+<p>5.24-6.7可交易黄金增幅书+增幅卷礼盒⭐⭐⭐</p>
+<p>6.7-6.19天空套⭐⭐⭐</p>
+<p>6.19-7.19灿烂徽章</p>
+<p>7.19-8.16深渊票</p>
+<p>8.9-8.30假强化卷⭐⭐</p>
+<p>8.16-9.17 黄金书+增幅器⭐⭐⭐</p>
+<p>8.30-9.17透明天空</p>
+<p>9.17-10.18灿烂徽章</p>
+<p>10.18-11.15 10强化券+强化保护</p>
+<p>11.15-12.13宠物装备</p>
+<p>12.13-1.10大头</p>
+<p>1.3-1.21白银天二（第二期白色天空套）⭐⭐</p>
 
       
     </div>
@@ -483,19 +548,27 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/node-js/" rel="tag"># node.js</a>
-          
-            <a href="/tags/express/" rel="tag"># express</a>
-          
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/02/SSR搭建/" rel="next" title="ShadowsocksR搭建记录">
+                <i class="fa fa-chevron-left"></i> ShadowsocksR搭建记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
         </div>
-      
-
-      
-      
-      
-
       
 
       
@@ -563,7 +636,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -582,31 +655,22 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
+                      
                     
-                      <a href="/tags/">
+                      
                     
-                  
-                    
+                      
                     
                       
                     
                       
                     
                     <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">标签</span>
+                    <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
+              
+
               
             </nav>
           
@@ -637,7 +701,7 @@
                   
                     
                   
-                  <a href="mailto:1242262161@qq.com" title="E-Mail &rarr; mailto:1242262161@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="mailto:1242262161@qq.com" title="E-mail &rarr; mailto:1242262161@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-mail</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -648,7 +712,7 @@
                   
                     
                   
-                  <a href="https://weibo.com/u/5682966586" title="Weibo &rarr; https://weibo.com/u/5682966586" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  <a href="https://weibo.com/u/5682966586" title="微博 &rarr; https://weibo.com/u/5682966586" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>微博</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -659,7 +723,7 @@
                   
                     
                   
-                  <a href="http://wpa.qq.com/msgrd?v=3&uin=1242262161&site=qq&menu=yes" title="QQ &rarr; http://wpa.qq.com/msgrd?v=3&uin=1242262161&site=qq&menu=yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i>QQ</a>
+                  <a href="https://www.zhihu.com/people/li-san-san-14-2/activities" title="知乎 &rarr; https://www.zhihu.com/people/li-san-san-14-2/activities" rel="noopener" target="_blank"><i class="fa fa-fw fa-clone"></i>知乎</a>
                 </span>
               
             </div>
@@ -668,6 +732,20 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                一些链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.cumt.edu.cn/" title="http://www.cumt.edu.cn/" rel="noopener" target="_blank">中国矿业大学</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
@@ -689,7 +767,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#春节套篇"><span class="nav-number">1.</span> <span class="nav-text">春节套篇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-天命英雄宝珠（9选1宝珠）（排名有先后）（下架后自逐渐走低）：⭐"><span class="nav-number">1.1.</span> <span class="nav-text">1.天命英雄宝珠（9选1宝珠）（排名有先后）（下架后自逐渐走低）：⭐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-天命英雄特别宝物礼盒（2个）⭐⭐"><span class="nav-number">1.2.</span> <span class="nav-text">2.天命英雄特别宝物礼盒（2个）⭐⭐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-称号（秘境迷踪）"><span class="nav-number">1.3.</span> <span class="nav-text">3.称号（秘境迷踪）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-宠物宝珠礼盒⭐⭐"><span class="nav-number">1.4.</span> <span class="nav-text">4.宠物宝珠礼盒⭐⭐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-宠物宝珠变更卷⭐⭐⭐（发家致富项目）"><span class="nav-number">1.5.</span> <span class="nav-text">5.宠物宝珠变更卷⭐⭐⭐（发家致富项目）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#盒子篇："><span class="nav-number">2.</span> <span class="nav-text">盒子篇：</span></a></li></ol></div>
             
 
           </div>
@@ -717,7 +795,21 @@
   <span class="author" itemprop="copyrightHolder">Just Do It</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">3k</span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">8 分钟</span>
   
 </div>
 
@@ -730,6 +822,32 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -745,6 +863,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
