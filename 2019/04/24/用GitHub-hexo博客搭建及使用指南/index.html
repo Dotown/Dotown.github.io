@@ -106,17 +106,17 @@
 
 
 
-  <meta name="description" content="记录SSR的搭建过程及简单配置">
+  <meta name="description" content="记博客搭建历程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ShadowsocksR搭建记录">
-<meta property="og:url" content="http://yoursite.com/2019/04/02/SSR搭建/index.html">
+<meta property="og:title" content="用GitHub+hexo博客搭建及使用指南">
+<meta property="og:url" content="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/index.html">
 <meta property="og:site_name" content="Dotown&#39;s Blog">
-<meta property="og:description" content="记录SSR的搭建过程及简单配置">
+<meta property="og:description" content="记博客搭建历程">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-24T15:17:44.615Z">
+<meta property="og:updated_time" content="2019-04-24T16:54:29.976Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ShadowsocksR搭建记录">
-<meta name="twitter:description" content="记录SSR的搭建过程及简单配置">
+<meta name="twitter:title" content="用GitHub+hexo博客搭建及使用指南">
+<meta name="twitter:description" content="记博客搭建历程">
 
 
 
@@ -124,7 +124,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/04/02/SSR搭建/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/">
 
 
 
@@ -134,7 +134,7 @@
   };
 </script>
 
-  <title>ShadowsocksR搭建记录 | Dotown's Blog</title>
+  <title>用GitHub+hexo博客搭建及使用指南 | Dotown's Blog</title>
   
 
 
@@ -332,7 +332,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/SSR搭建/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dotown">
@@ -349,7 +349,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ShadowsocksR搭建记录
+          <h1 class="post-title" itemprop="name headline">用GitHub+hexo博客搭建及使用指南
 
               
             
@@ -375,7 +375,7 @@
                 
               
 
-              <time title="创建时间：2019-04-02 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-02T00:00:00+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-24 23:20:35" itemprop="dateCreated datePublished" datetime="2019-04-24T23:20:35+08:00">2019-04-24</time>
             
 
             
@@ -429,7 +429,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.6k</span>
+                <span title="本文字数">710</span>
               
 
               
@@ -443,7 +443,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">4 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -464,45 +464,36 @@
 
       
         <blockquote>
-<p>记录SSR的搭建过程及简单配置</p>
+<p>记博客搭建历程</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2><h3 id="1-下载SSR客户端"><a href="#1-下载SSR客户端" class="headerlink" title="1.下载SSR客户端"></a>1.下载SSR客户端</h3><p><a href="https://github.com/shadowsocks/shadowsocks-windows/releases/download/4.1.5/Shadowsocks-4.1.5.zip" target="_blank" rel="noopener">Windows ShadowsocksR</a></p>
-<p><a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v1.8.2/ShadowsocksX-NG.app.1.8.2.zip" target="_blank" rel="noopener">Macbook ShadowsocksR</a></p>
-<p><a href="https://github.com/shadowsocks/shadowsocks-android/releases/download/v4.7.3/shadowsocks--universal-4.7.3.apk" target="_blank" rel="noopener">Android ShadowsocksR</a></p>
-<h3 id="2-下载Xshell"><a href="#2-下载Xshell" class="headerlink" title="2.下载Xshell"></a>2.下载Xshell</h3><p><a href="http://45.32.141.248:8000/f/d91974d046/" target="_blank" rel="noopener">Xshell 5</a></p>
-<h2 id="租用VPS服务器"><a href="#租用VPS服务器" class="headerlink" title="租用VPS服务器"></a>租用VPS服务器</h2><p>笔者这里以<a href="https://www.vultr.com/?ref=7981852" target="_blank" rel="noopener">vulter</a>为例：</p>
-<p>1.注册账号；</p>
-<p>2.充值（Billing）余额，最低充值10刀，支持<strong>palpay或支付</strong>；</p>
-<p>3.选择服务器，系统记得选择<strong>centos6</strong>（centos7默认的防火墙可能会干扰SSR的正常连接），付款即可。（vultr是按分钟收费，所以网速过慢或者IP被墙可以直接destroy然后再deploy）;</p>
-<h2 id="使用服务器-bash-ssr-sh"><a href="#使用服务器-bash-ssr-sh" class="headerlink" title="使用服务器(bash ssr.sh)"></a>使用服务器(bash ssr.sh)</h2><p>1.获取所租服务器的 IP address和Password</p>
-<p>2.打开Xshell-&gt;文件-&gt;新建，名称随遍，主机填VPS服务器的IP，端口号默认22。</p>
-<p>3.如果连接成功，则用户名为root密码为服务器提供的Password。如果连接失败，则意味着此IP无法连接，需要更换，即重复租服务器的步骤。</p>
-<p>4.部署 Shadowsocks</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/hombo125/doubi/master/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure>
-<p>脚本安装成功后，运行<code>bash ssr.sh</code>即可打开Shadowsocks</p>
-<p>5.安装Shadowsocks（数字1）</p>
-<p>6.设置端口（理论上40-65535，建议一些特殊端口<strong>80,143,443,1433,3306,3389,8000,8080</strong>）;设置密码；设置加密方式（早期版本不支持aes-128-cft8等建议1-9）；设置协议插件；设置混淆插件（建议<strong>plain</strong>；tls 1.2_ticket_auth容易受到干扰，选择除tls开头以外的其他混淆!）；设置端口连接数量；设置连接速度（默认就可以）</p>
-<h2 id="设置加速"><a href="#设置加速" class="headerlink" title="设置加速"></a>设置加速</h2><p>作者使用的是Google BBR加速，vultr可以装BBR加速，并且提升很大。</p>
-<h3 id="1-安装服务框架"><a href="#1-安装服务框架" class="headerlink" title="1.安装服务框架"></a>1.安装服务框架</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
-<h3 id="2-部署完成后输入y或者rebot重启服务器"><a href="#2-部署完成后输入y或者rebot重启服务器" class="headerlink" title="2.部署完成后输入y或者rebot重启服务器"></a>2.部署完成后输入y或者rebot重启服务器</h3><h2 id="SSR配置和日常使用"><a href="#SSR配置和日常使用" class="headerlink" title="SSR配置和日常使用"></a>SSR配置和日常使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash ssr.sh</span><br></pre></td></tr></table></figure>
-<p>进入详细的ssr设置</p>
-<p>PS：以下是官方提供的相关信息，大家可以逐个进行测试（建议每个机房测试三次），选出最适合自己的。如果你使用的 Windows 系统，并且不太清楚怎么测试，可以使用测试脚本进行测试。</p>
-<p><a href="http://hnd-jp-ping.vultr.com/" target="_blank" rel="noopener">日本东京</a> 108.61.201.151</p>
-<p><a href="http://sgp-ping.vultr.com/" target="_blank" rel="noopener">新加坡</a>    45.32.100.168</p>
-<p><a href="http://ams-nl-ping.vultr.com/" target="_blank" rel="noopener">荷兰阿姆斯特丹</a>    108.61.198.102</p>
-<p><a href="http://par-fr-ping.vultr.com/" target="_blank" rel="noopener">法国巴黎</a>108.61.209.127</p>
-<p><a href="http://fra-de-ping.vultr.com/" target="_blank" rel="noopener">德国法兰克福</a>    108.61.210.117</p>
-<p><a href="http://lon-gb-ping.vultr.com/" target="_blank" rel="noopener">英国伦敦</a>    108.61.196.101</p>
-<p><a href="http://tx-us-ping.vultr.com/" target="_blank" rel="noopener">美国达拉斯</a>    108.61.224.175</p>
-<p><a href="http://wa-us-ping.vultr.com/" target="_blank" rel="noopener">美国西雅图</a>    108.61.194.105</p>
-<p><a href="http://il-us-ping.vultr.com/" target="_blank" rel="noopener">美国芝加哥</a>    107.191.51.12</p>
-<p><a href="http://ga-us-ping.vultr.com/" target="_blank" rel="noopener">美国亚特兰大</a>    108.61.193.166</p>
-<p><a href="http://lax-ca-us-ping.vultr.com/" target="_blank" rel="noopener">美国洛杉矶</a>    108.61.219.200</p>
-<p><a href="http://fl-us-ping.vultr.com/" target="_blank" rel="noopener">美国迈阿密</a>    104.156.244.232</p>
-<p><a href="http://nj-us-ping.vultr.com/" target="_blank" rel="noopener">美国纽约</a>    108.61.149.182 </p>
-<p><a href="http://sjo-ca-us-ping.vultr.com/" target="_blank" rel="noopener">美国硅谷</a>    104.156.230.107</p>
-<p><a href="http://syd-au-ping.vultr.com/" target="_blank" rel="noopener">澳大利亚悉尼</a>    108.61.212.117</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote>
+<p> <strong>环境：</strong></p>
+<ul>
+<li>Window10</li>
+<li>node  v10.11.0</li>
+</ul>
+<ul>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">git  v2.21.0</a></li>
+<li>hexo  v3.8.0</li>
+<li><a href="https://github.com/Dotown/hexo-theme-next" target="_blank" rel="noopener">next  v.7.1.0</a></li>
+</ul>
+</blockquote>
+<p> 除了以上环境之外，还需要一个github账号。</p>
+<h2 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h2><h3 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h3><p>选择本地电脑的某个空文件夹作为存放代码的地方，右击<code>Git Bash Here</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init  <span class="comment">#新建网站</span></span><br><span class="line">$ hexo g  <span class="comment">#生成静态文件</span></span><br><span class="line">$ hexo s  <span class="comment">#部署网站</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>PS：hexo指令请挪步<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">这里</a></p>
+</blockquote>
+<p>访问<code>http://localhost:4000/</code>，即可看到默认的博客配置。</p>
+<h3 id="github仓库"><a href="#github仓库" class="headerlink" title="github仓库"></a>github仓库</h3><p>新建一个名为<code>username.github.io</code>的仓库（username是你的用户名），同时，博客地址也是<code>username.github.io</code>。</p>
+<h3 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h3><p>本地仓库和远程仓库要建立连接，才能把本地的博客代码文件上传到远程仓库。因此用GitHub提供的ssh key来达到安全传输的目的。</p>
+<p>1.安装<code>hexo-deployer-git</code>插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>2.末尾添加<strong>博客配置文件</strong>（博客目录下的_config.yml）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io.git</span><br><span class="line">  message: master</span><br></pre></td></tr></table></figure>
+<p>2.用git bash执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/. ssh <span class="comment">#检查本机已存在的ssh密钥</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"邮件地址"</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -533,8 +524,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/19/openFOAM安装/" rel="next" title="openFOAM安装">
-                <i class="fa fa-chevron-left"></i> openFOAM安装
+              <a href="/2019/04/15/DNF价格记录/" rel="next" title="价格记录">
+                <i class="fa fa-chevron-left"></i> 价格记录
               </a>
             
           </div>
@@ -542,10 +533,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/15/DNF价格记录/" rel="prev" title="价格记录">
-                价格记录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -739,7 +726,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工具"><span class="nav-number">1.</span> <span class="nav-text">准备工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载SSR客户端"><span class="nav-number">1.1.</span> <span class="nav-text">1.下载SSR客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-下载Xshell"><span class="nav-number">1.2.</span> <span class="nav-text">2.下载Xshell</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#租用VPS服务器"><span class="nav-number">2.</span> <span class="nav-text">租用VPS服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用服务器-bash-ssr-sh"><span class="nav-number">3.</span> <span class="nav-text">使用服务器(bash ssr.sh)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置加速"><span class="nav-number">4.</span> <span class="nav-text">设置加速</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装服务框架"><span class="nav-number">4.1.</span> <span class="nav-text">1.安装服务框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-部署完成后输入y或者rebot重启服务器"><span class="nav-number">4.2.</span> <span class="nav-text">2.部署完成后输入y或者rebot重启服务器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSR配置和日常使用"><span class="nav-number">5.</span> <span class="nav-text">SSR配置和日常使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客搭建"><span class="nav-number">2.</span> <span class="nav-text">博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地仓库"><span class="nav-number">2.1.</span> <span class="nav-text">本地仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github仓库"><span class="nav-number">2.2.</span> <span class="nav-text">github仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立连接"><span class="nav-number">2.3.</span> <span class="nav-text">建立连接</span></a></li></ol></li></ol></div>
             
 
           </div>
