@@ -98,14 +98,14 @@
 
   <meta name="description" content="记录学习JAVA过程中易意忘的小知识点。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="openFOAM安装">
-<meta property="og:url" content="http://yoursite.com/2019/01/19/JAVA学习记录/index.html">
+<meta property="og:title" content="JAVA学习记录">
+<meta property="og:url" content="http://yoursite.com/2019/09/03/JAVA学习记录/index.html">
 <meta property="og:site_name" content="Dotown&#39;s Blog">
 <meta property="og:description" content="记录学习JAVA过程中易意忘的小知识点。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-03T02:05:21.353Z">
+<meta property="og:updated_time" content="2019-09-03T15:42:20.320Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="openFOAM安装">
+<meta name="twitter:title" content="JAVA学习记录">
 <meta name="twitter:description" content="记录学习JAVA过程中易意忘的小知识点。">
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/01/19/JAVA学习记录/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/03/JAVA学习记录/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>openFOAM安装 | Dotown's Blog</title>
+  <title>JAVA学习记录 | Dotown's Blog</title>
   
 
 
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/19/JAVA学习记录/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/03/JAVA学习记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dotown">
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">openFOAM安装
+          <h1 class="post-title" itemprop="name headline">JAVA学习记录
 
               
             
@@ -365,7 +365,7 @@
                 
               
 
-              <time title="创建时间：2019-01-19 23:31:19" itemprop="dateCreated datePublished" datetime="2019-01-19T23:31:19+08:00">2019-01-19</time>
+              <time title="创建时间：2019-09-03 23:31:19" itemprop="dateCreated datePublished" datetime="2019-09-03T23:31:19+08:00">2019-09-03</time>
             
 
             
@@ -419,7 +419,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.1k</span>
+                <span title="本文字数">2.4k</span>
               
 
               
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">6 分钟</span>
               
             </div>
           
@@ -468,11 +468,30 @@
 <p>无符号右移(&gt;&gt;&gt;)右移最高为填0；</p>
 <h3 id="foreach"><a href="#foreach" class="headerlink" title="foreach"></a>foreach</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(元素变量x:遍历对象 obj)&#123;</span><br><span class="line">    引用x的java语句;</span><br><span class="line">&#125;</span><br><span class="line">eg： </span><br><span class="line"><span class="keyword">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x:arr)&#123;</span><br><span class="line">	System.println(x);<span class="comment">//将数组arr的元素逐个输出</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>java中将字符串作为对象来管理，因此可以像创建其他类对象一样来创建字符串对象。创建对象要使用类的构造方法。</p>
-<h4 id="String-char-a"><a href="#String-char-a" class="headerlink" title="String(char a[])"></a>String(char a[])</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[] = &#123;<span class="string">'g'</span>,<span class="string">'o'</span>,<span class="string">'o'</span>,<span class="string">'d'</span>&#125;;</span><br><span class="line">String s = <span class="keyword">new</span> String(a);</span><br><span class="line">等价于  String s = <span class="keyword">new</span> String(<span class="string">'good'</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="String-char-a-int-offset-int-length"><a href="#String-char-a-int-offset-int-length" class="headerlink" title="String(char a[], int offset, int length)"></a>String(char a[], int offset, int length)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[] = &#123;<span class="string">'s'</span>,<span class="string">'t'</span>,<span class="string">'u'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'n'</span>,<span class="string">'t'</span>&#125;;</span><br><span class="line">String s = <span class="keyword">new</span> String(a,<span class="number">2</span>,<span class="number">4</span>);</span><br><span class="line">等价于 String s = <span class="keyword">new</span> String(<span class="string">'uden'</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="indexOf-String-s"><a href="#indexOf-String-s" class="headerlink" title="indexOf(String s)"></a>indexOf(String s)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">'We are students'</span>;</span><br><span class="line"><span class="keyword">int</span> size = str.indexOf(<span class="string">'a'</span>);  <span class="comment">//size=3     查找字符a在字符串str中的索引位置，未找到返回-1</span></span><br></pre></td></tr></table></figure>
-<h4 id="lastIndexOf-String-str"><a href="#lastIndexOf-String-str" class="headerlink" title="lastIndexOf(String str)"></a>lastIndexOf(String str)</h4><p>返回字符串最后一次出现的索引位置。如果没有检索到字符串str，该方法返回-1</p>
+<h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><h5 id="String-char-a"><a href="#String-char-a" class="headerlink" title="String(char a[])"></a>String(char a[])</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[] = &#123;<span class="string">'g'</span>,<span class="string">'o'</span>,<span class="string">'o'</span>,<span class="string">'d'</span>&#125;;</span><br><span class="line">String s = <span class="keyword">new</span> String(a);</span><br><span class="line">等价于  String s = <span class="keyword">new</span> String(<span class="string">"good"</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="String-char-a-int-offset-int-length"><a href="#String-char-a-int-offset-int-length" class="headerlink" title="String(char a[], int offset, int length)"></a>String(char a[], int offset, int length)</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[] = &#123;<span class="string">'s'</span>,<span class="string">'t'</span>,<span class="string">'u'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'n'</span>,<span class="string">'t'</span>&#125;;</span><br><span class="line">String s = <span class="keyword">new</span> String(a,<span class="number">2</span>,<span class="number">4</span>);</span><br><span class="line">等价于 String s = <span class="keyword">new</span> String(<span class="string">"uden"</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h4><h5 id="indexOf-String-s"><a href="#indexOf-String-s" class="headerlink" title="indexOf(String s)"></a>indexOf(String s)</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">'We are students'</span>;</span><br><span class="line"><span class="keyword">int</span> size = str.indexOf(<span class="string">"a"</span>);  <span class="comment">//size=3     查找字符a在字符串str中的索引位置，未找到返回-1</span></span><br></pre></td></tr></table></figure>
+<h5 id="lastIndexOf-String-str"><a href="#lastIndexOf-String-str" class="headerlink" title="lastIndexOf(String str)"></a>lastIndexOf(String str)</h5><p>返回字符串最后一次出现的索引位置。如果没有检索到字符串str，该方法返回-1</p>
 <p>PS:lastIndexOf()方法中的参数是空字符串，则返回结果与调用该字符串length()方法的返回结果相同。</p>
+<h5 id="str-CharAt-int-index"><a href="#str-CharAt-int-index" class="headerlink" title="str.CharAt(int index)"></a>str.CharAt(int index)</h5><p>将索引处的<strong>字符</strong>返回。</p>
+<h4 id="获取子字符串"><a href="#获取子字符串" class="headerlink" title="获取子字符串"></a>获取子字符串</h4><h5 id="substring"><a href="#substring" class="headerlink" title="substring()"></a>substring()</h5><p>str.substring(int beginIndex) 返回从索引位置开始截取直到该字符串结尾的<strong>字串</strong>。</p>
+<p>str.substring(int beginIndex, int endIndex)返回从字符串某一索引位置开始截取至某一索引位置结束的字串。</p>
+<h4 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h4><h5 id="replace-char-oldChar-char-newChar"><a href="#replace-char-oldChar-char-newChar" class="headerlink" title="replace(char oldChar, char newChar)"></a>replace(char oldChar, char newChar)</h5><p>返回替换后的字符串</p>
+<h4 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h4><h5 id="startsWith-String-prefix"><a href="#startsWith-String-prefix" class="headerlink" title="startsWith(String prefix)"></a>startsWith(String prefix)</h5><p>判断当前字符串对象的前缀是否是参数</p>
+<h5 id="endsWith-String-suffix"><a href="#endsWith-String-suffix" class="headerlink" title="endsWith(String suffix)"></a>endsWith(String suffix)</h5><p>判断当前字符串对象是否以给定的子字符串结束</p>
+<h5 id="equals-String-otherstr"><a href="#equals-String-otherstr" class="headerlink" title="equals(String otherstr)"></a>equals(String otherstr)</h5><p>比较两个字符串的内容，区分大小写。</p>
+<p><strong>对字符串对象进行比较不能简单地使用”==“，比较运算符比较的是两个字符串的地址是否相同。</strong></p>
+<h5 id="equalsIgnoreCase"><a href="#equalsIgnoreCase" class="headerlink" title="equalsIgnoreCase()"></a>equalsIgnoreCase()</h5><p>比较两个字符串的内容，不区分大小写。</p>
+<h5 id="compareTo"><a href="#compareTo" class="headerlink" title="compareTo()"></a>compareTo()</h5><p>按字典顺序比较两个字符串，比较基于字符串中各个字符的Unicode值，如果此String对象位于参数字符串之前，则返回一个负整数；如果在其之后，则返回一个正整数；如果这两个字符串相等，则结果为0。</p>
+<h4 id="大小写转换"><a href="#大小写转换" class="headerlink" title="大小写转换"></a>大小写转换</h4><h5 id="toLowerCase-转换成大写"><a href="#toLowerCase-转换成大写" class="headerlink" title="toLowerCase()  转换成大写"></a>toLowerCase()  转换成大写</h5><h5 id="toUpperCase-转换成小写"><a href="#toUpperCase-转换成小写" class="headerlink" title="toUpperCase()  转换成小写"></a>toUpperCase()  转换成小写</h5><h4 id="分割"><a href="#分割" class="headerlink" title="分割"></a>分割</h4><h5 id="split-String-sign"><a href="#split-String-sign" class="headerlink" title="split(String sign)"></a>split(String sign)</h5><p>sign为分隔符，多个分隔符之间用|来连接。eg: “,|=”  表示分隔符分别为“，”和“=”</p>
+<p>可以使用<strong>正则表达式</strong>。</p>
+<h5 id="split-String-sign-int-limit"><a href="#split-String-sign-int-limit" class="headerlink" title="split(String sign, int limit)"></a>split(String sign, int limit)</h5><p>limit: 限制的分割份数。</p>
+<p>PS: <code>| , + , * , ^ , $ , / , | , [ , ] , ( , ) , - , . , \</code>。例如用|竖线去分割某字符，因|本身是正则表达式中的一部分，所以需要\去转义，因转义使用\，而这\正好也是正则表达式的字符，所以还得用一个\，所以需要两个\。</p>
+<h4 id="字符串生成器"><a href="#字符串生成器" class="headerlink" title="字符串生成器"></a>字符串生成器</h4><p>StringBuilder对象初始容量为16个字符，可以自行指定初始长度。最后输出StringBuilder的字符串结果，可以使用toString()方法。</p>
+<h5 id="append-content"><a href="#append-content" class="headerlink" title="append(content)"></a>append(content)</h5><p>用于向字符串生成器中追加内容。可以接受任何类型的数据，如<code>int、boolean、char、String、double</code></p>
+<h5 id="insert-int-offset-arg"><a href="#insert-int-offset-arg" class="headerlink" title="insert(int offset,arg)"></a>insert(int offset,arg)</h5><p>offset:字符串生成器的位置。 arg:新插入的字符串</p>
+<h5 id="delete-nt-start-int-end"><a href="#delete-nt-start-int-end" class="headerlink" title="delete(nt start, int end)"></a>delete(nt start, int end)</h5><p>删除从start下标到end下标位置处的字符串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder bf = <span class="keyword">new</span> StringBuilder(<span class="string">"hello"</span>);</span><br><span class="line">bf.insert(<span class="number">5</span>,<span class="string">"world"</span>);</span><br><span class="line">System.out.println(bf.toString());  =&gt;输出为helloworld</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -503,15 +522,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/08/31/百度API/" rel="next" title="百度API使用填坑">
+                <i class="fa fa-chevron-left"></i> 百度API使用填坑
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/19/openFOAM安装/" rel="prev" title="openFOAM安装">
-                openFOAM安装 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -705,7 +724,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符类型"><span class="nav-number">1.</span> <span class="nav-text">字符类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量范围"><span class="nav-number">2.</span> <span class="nav-text">变量范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符优先级"><span class="nav-number">3.</span> <span class="nav-text">运算符优先级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">4.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位运算符"><span class="nav-number">5.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#foreach"><span class="nav-number">6.</span> <span class="nav-text">foreach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">7.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String-char-a"><span class="nav-number">7.1.</span> <span class="nav-text">String(char a[])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String-char-a-int-offset-int-length"><span class="nav-number">7.2.</span> <span class="nav-text">String(char a[], int offset, int length)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexOf-String-s"><span class="nav-number">7.3.</span> <span class="nav-text">indexOf(String s)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lastIndexOf-String-str"><span class="nav-number">7.4.</span> <span class="nav-text">lastIndexOf(String str)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符类型"><span class="nav-number">1.</span> <span class="nav-text">字符类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量范围"><span class="nav-number">2.</span> <span class="nav-text">变量范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符优先级"><span class="nav-number">3.</span> <span class="nav-text">运算符优先级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">4.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位运算符"><span class="nav-number">5.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#foreach"><span class="nav-number">6.</span> <span class="nav-text">foreach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">7.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建"><span class="nav-number">7.1.</span> <span class="nav-text">创建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#String-char-a"><span class="nav-number">7.1.1.</span> <span class="nav-text">String(char a[])</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#String-char-a-int-offset-int-length"><span class="nav-number">7.1.2.</span> <span class="nav-text">String(char a[], int offset, int length)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查找"><span class="nav-number">7.2.</span> <span class="nav-text">查找</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#indexOf-String-s"><span class="nav-number">7.2.1.</span> <span class="nav-text">indexOf(String s)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#lastIndexOf-String-str"><span class="nav-number">7.2.2.</span> <span class="nav-text">lastIndexOf(String str)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#str-CharAt-int-index"><span class="nav-number">7.2.3.</span> <span class="nav-text">str.CharAt(int index)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取子字符串"><span class="nav-number">7.3.</span> <span class="nav-text">获取子字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#substring"><span class="nav-number">7.3.1.</span> <span class="nav-text">substring()</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#替换"><span class="nav-number">7.4.</span> <span class="nav-text">替换</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#replace-char-oldChar-char-newChar"><span class="nav-number">7.4.1.</span> <span class="nav-text">replace(char oldChar, char newChar)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#验证"><span class="nav-number">7.5.</span> <span class="nav-text">验证</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#startsWith-String-prefix"><span class="nav-number">7.5.1.</span> <span class="nav-text">startsWith(String prefix)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#endsWith-String-suffix"><span class="nav-number">7.5.2.</span> <span class="nav-text">endsWith(String suffix)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#equals-String-otherstr"><span class="nav-number">7.5.3.</span> <span class="nav-text">equals(String otherstr)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#equalsIgnoreCase"><span class="nav-number">7.5.4.</span> <span class="nav-text">equalsIgnoreCase()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#compareTo"><span class="nav-number">7.5.5.</span> <span class="nav-text">compareTo()</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#大小写转换"><span class="nav-number">7.6.</span> <span class="nav-text">大小写转换</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#toLowerCase-转换成大写"><span class="nav-number">7.6.1.</span> <span class="nav-text">toLowerCase()  转换成大写</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#toUpperCase-转换成小写"><span class="nav-number">7.6.2.</span> <span class="nav-text">toUpperCase()  转换成小写</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分割"><span class="nav-number">7.7.</span> <span class="nav-text">分割</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#split-String-sign"><span class="nav-number">7.7.1.</span> <span class="nav-text">split(String sign)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#split-String-sign-int-limit"><span class="nav-number">7.7.2.</span> <span class="nav-text">split(String sign, int limit)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串生成器"><span class="nav-number">7.8.</span> <span class="nav-text">字符串生成器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#append-content"><span class="nav-number">7.8.1.</span> <span class="nav-text">append(content)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#insert-int-offset-arg"><span class="nav-number">7.8.2.</span> <span class="nav-text">insert(int offset,arg)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#delete-nt-start-int-end"><span class="nav-number">7.8.3.</span> <span class="nav-text">delete(nt start, int end)</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -738,7 +757,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">55k</span>
+    <span title="站点总字数">57k</span>
   
 
   
@@ -747,7 +766,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">2:18</span>
+    <span title="站点阅读时长">2:21</span>
   
 </div>
 
