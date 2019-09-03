@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="记博客搭建历程">
+  <meta name="description" content="记录学习JAVA过程中易意忘的小知识点。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用GitHub+hexo博客搭建及使用指南">
-<meta property="og:url" content="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/index.html">
+<meta property="og:title" content="openFOAM安装">
+<meta property="og:url" content="http://yoursite.com/2019/01/19/JAVA学习记录/index.html">
 <meta property="og:site_name" content="Dotown&#39;s Blog">
-<meta property="og:description" content="记博客搭建历程">
+<meta property="og:description" content="记录学习JAVA过程中易意忘的小知识点。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-24T16:54:29.976Z">
+<meta property="og:updated_time" content="2019-09-03T02:05:21.353Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用GitHub+hexo博客搭建及使用指南">
-<meta name="twitter:description" content="记博客搭建历程">
+<meta name="twitter:title" content="openFOAM安装">
+<meta name="twitter:description" content="记录学习JAVA过程中易意忘的小知识点。">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/19/JAVA学习记录/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>用GitHub+hexo博客搭建及使用指南 | Dotown's Blog</title>
+  <title>openFOAM安装 | Dotown's Blog</title>
   
 
 
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/19/JAVA学习记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dotown">
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用GitHub+hexo博客搭建及使用指南
+          <h1 class="post-title" itemprop="name headline">openFOAM安装
 
               
             
@@ -365,7 +365,7 @@
                 
               
 
-              <time title="创建时间：2019-04-24 23:20:35" itemprop="dateCreated datePublished" datetime="2019-04-24T23:20:35+08:00">2019-04-24</time>
+              <time title="创建时间：2019-01-19 23:31:19" itemprop="dateCreated datePublished" datetime="2019-01-19T23:31:19+08:00">2019-01-19</time>
             
 
             
@@ -419,7 +419,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">710</span>
+                <span title="本文字数">1.1k</span>
               
 
               
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -454,36 +454,25 @@
 
       
         <blockquote>
-<p>记博客搭建历程</p>
+<p>记录学习JAVA过程中易意忘的小知识点。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote>
-<p> <strong>环境：</strong></p>
-<ul>
-<li>Window10</li>
-<li>node  v10.11.0</li>
-</ul>
-<ul>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">git  v2.21.0</a></li>
-<li>hexo  v3.8.0</li>
-<li><a href="https://github.com/Dotown/hexo-theme-next" target="_blank" rel="noopener">next  v.7.1.0</a></li>
-</ul>
-</blockquote>
-<p> 除了以上环境之外，还需要一个github账号。</p>
-<h2 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h2><h3 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h3><p>选择本地电脑的某个空文件夹作为存放代码的地方，右击<code>Git Bash Here</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init  <span class="comment">#新建网站</span></span><br><span class="line">$ hexo g  <span class="comment">#生成静态文件</span></span><br><span class="line">$ hexo s  <span class="comment">#部署网站</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>PS：hexo指令请挪步<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">这里</a></p>
-</blockquote>
-<p>访问<code>http://localhost:4000/</code>，即可看到默认的博客配置。</p>
-<h3 id="github仓库"><a href="#github仓库" class="headerlink" title="github仓库"></a>github仓库</h3><p>新建一个名为<code>username.github.io</code>的仓库（username是你的用户名），同时，博客地址也是<code>username.github.io</code>。</p>
-<h3 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h3><p>本地仓库和远程仓库要建立连接，才能把本地的博客代码文件上传到远程仓库。因此用GitHub提供的ssh key来达到安全传输的目的。</p>
-<p>1.安装<code>hexo-deployer-git</code>插件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>2.末尾添加<strong>博客配置文件</strong>（博客目录下的_config.yml）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io.git</span><br><span class="line">  message: master</span><br></pre></td></tr></table></figure>
-<p>2.用git bash执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/. ssh <span class="comment">#检查本机已存在的ssh密钥</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"邮件地址"</span></span><br></pre></td></tr></table></figure>
+<h3 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> word = <span class="string">'d'</span>;</span><br><span class="line"><span class="keyword">int</span>(word);   <span class="comment">//64</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> word = <span class="number">64</span>;   &lt;==&gt; <span class="keyword">char</span> word= <span class="string">'d'</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="变量范围"><a href="#变量范围" class="headerlink" title="变量范围"></a>变量范围</h3><p>类体中所定义的变量为成员变量。类的成员变量分为静态变量和实例变量。类的方法中定义的为局部变量。</p>
+<p>成员变量在设定时需要设置初始值。</p>
+<h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3><p>增量和减量运算&gt;算术运算&gt;比较运算&gt;逻辑运算&gt;赋值运算</p>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>&amp;&amp; 短路运算（当第一个表达式为false，则不判定第二个表达式）</p>
+<p>&amp;非短路运算（第一个和第二个都会进行判断）</p>
+<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p> 左移(&lt;&lt;) 左移空的补0；</p>
+<p>右移(&gt;&gt;)右移部位和原始最高为一致；</p>
+<p>无符号右移(&gt;&gt;&gt;)右移最高为填0；</p>
+<h3 id="foreach"><a href="#foreach" class="headerlink" title="foreach"></a>foreach</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(元素变量x:遍历对象 obj)&#123;</span><br><span class="line">    引用x的java语句;</span><br><span class="line">&#125;</span><br><span class="line">eg： </span><br><span class="line"><span class="keyword">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x:arr)&#123;</span><br><span class="line">	System.println(x);<span class="comment">//将数组arr的元素逐个输出</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>java中将字符串作为对象来管理，因此可以像创建其他类对象一样来创建字符串对象。创建对象要使用类的构造方法。</p>
+<h4 id="String-char-a"><a href="#String-char-a" class="headerlink" title="String(char a[])"></a>String(char a[])</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[] = &#123;<span class="string">'g'</span>,<span class="string">'o'</span>,<span class="string">'o'</span>,<span class="string">'d'</span>&#125;;</span><br><span class="line">String s = <span class="keyword">new</span> String(a);</span><br><span class="line">等价于  String s = <span class="keyword">new</span> String(<span class="string">'good'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="String-char-a-int-offset-int-length"><a href="#String-char-a-int-offset-int-length" class="headerlink" title="String(char a[], int offset, int length)"></a>String(char a[], int offset, int length)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[] = &#123;<span class="string">'s'</span>,<span class="string">'t'</span>,<span class="string">'u'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'n'</span>,<span class="string">'t'</span>&#125;;</span><br><span class="line">String s = <span class="keyword">new</span> String(a,<span class="number">2</span>,<span class="number">4</span>);</span><br><span class="line">等价于 String s = <span class="keyword">new</span> String(<span class="string">'uden'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="indexOf-String-s"><a href="#indexOf-String-s" class="headerlink" title="indexOf(String s)"></a>indexOf(String s)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">'We are students'</span>;</span><br><span class="line"><span class="keyword">int</span> size = str.indexOf(<span class="string">'a'</span>);  <span class="comment">//size=3     查找字符a在字符串str中的索引位置，未找到返回-1</span></span><br></pre></td></tr></table></figure>
+<h4 id="lastIndexOf-String-str"><a href="#lastIndexOf-String-str" class="headerlink" title="lastIndexOf(String str)"></a>lastIndexOf(String str)</h4><p>返回字符串最后一次出现的索引位置。如果没有检索到字符串str，该方法返回-1</p>
+<p>PS:lastIndexOf()方法中的参数是空字符串，则返回结果与调用该字符串length()方法的返回结果相同。</p>
 
       
     </div>
@@ -514,18 +503,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/15/DNF价格记录/" rel="next" title="春节记录">
-                <i class="fa fa-chevron-left"></i> 春节记录
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/07/Vue使用教程/" rel="prev" title="Vue使用教程(持续更新)">
-                Vue使用教程(持续更新) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/19/openFOAM安装/" rel="prev" title="openFOAM安装">
+                openFOAM安装 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -720,7 +705,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客搭建"><span class="nav-number">2.</span> <span class="nav-text">博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地仓库"><span class="nav-number">2.1.</span> <span class="nav-text">本地仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github仓库"><span class="nav-number">2.2.</span> <span class="nav-text">github仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立连接"><span class="nav-number">2.3.</span> <span class="nav-text">建立连接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符类型"><span class="nav-number">1.</span> <span class="nav-text">字符类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量范围"><span class="nav-number">2.</span> <span class="nav-text">变量范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符优先级"><span class="nav-number">3.</span> <span class="nav-text">运算符优先级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">4.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位运算符"><span class="nav-number">5.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#foreach"><span class="nav-number">6.</span> <span class="nav-text">foreach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">7.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String-char-a"><span class="nav-number">7.1.</span> <span class="nav-text">String(char a[])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String-char-a-int-offset-int-length"><span class="nav-number">7.2.</span> <span class="nav-text">String(char a[], int offset, int length)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexOf-String-s"><span class="nav-number">7.3.</span> <span class="nav-text">indexOf(String s)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lastIndexOf-String-str"><span class="nav-number">7.4.</span> <span class="nav-text">lastIndexOf(String str)</span></a></li></ol></li></ol></div>
             
 
           </div>

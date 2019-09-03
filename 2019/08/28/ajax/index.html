@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="记博客搭建历程">
+  <meta name="description" content="XMLHTTPRequestopen(method,url,async)method：规定请求的类型；url：文件在服务器上的位置；async：true(异步)或false(同步) setRequestHeader(header,value)herder：规定头的名称；value：规定头的值将请求发送到服务器 onreadystatechange该属性用来指定xhr对象状态改变时的时间函数 当re">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用GitHub+hexo博客搭建及使用指南">
-<meta property="og:url" content="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/index.html">
+<meta property="og:title" content="Ajax入坑笔记">
+<meta property="og:url" content="http://yoursite.com/2019/08/28/ajax/index.html">
 <meta property="og:site_name" content="Dotown&#39;s Blog">
-<meta property="og:description" content="记博客搭建历程">
+<meta property="og:description" content="XMLHTTPRequestopen(method,url,async)method：规定请求的类型；url：文件在服务器上的位置；async：true(异步)或false(同步) setRequestHeader(header,value)herder：规定头的名称；value：规定头的值将请求发送到服务器 onreadystatechange该属性用来指定xhr对象状态改变时的时间函数 当re">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-24T16:54:29.976Z">
+<meta property="og:updated_time" content="2019-09-03T02:10:06.523Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用GitHub+hexo博客搭建及使用指南">
-<meta name="twitter:description" content="记博客搭建历程">
+<meta name="twitter:title" content="Ajax入坑笔记">
+<meta name="twitter:description" content="XMLHTTPRequestopen(method,url,async)method：规定请求的类型；url：文件在服务器上的位置；async：true(异步)或false(同步) setRequestHeader(header,value)herder：规定头的名称；value：规定头的值将请求发送到服务器 onreadystatechange该属性用来指定xhr对象状态改变时的时间函数 当re">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/28/ajax/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>用GitHub+hexo博客搭建及使用指南 | Dotown's Blog</title>
+  <title>Ajax入坑笔记 | Dotown's Blog</title>
   
 
 
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/28/ajax/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dotown">
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用GitHub+hexo博客搭建及使用指南
+          <h1 class="post-title" itemprop="name headline">Ajax入坑笔记
 
               
             
@@ -365,7 +365,7 @@
                 
               
 
-              <time title="创建时间：2019-04-24 23:20:35" itemprop="dateCreated datePublished" datetime="2019-04-24T23:20:35+08:00">2019-04-24</time>
+              <time title="创建时间：2019-08-28 09:40:10" itemprop="dateCreated datePublished" datetime="2019-08-28T09:40:10+08:00">2019-08-28</time>
             
 
             
@@ -419,7 +419,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">710</span>
+                <span title="本文字数">1.2k</span>
               
 
               
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -453,37 +453,22 @@
       
 
       
-        <blockquote>
-<p>记博客搭建历程</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote>
-<p> <strong>环境：</strong></p>
-<ul>
-<li>Window10</li>
-<li>node  v10.11.0</li>
-</ul>
-<ul>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">git  v2.21.0</a></li>
-<li>hexo  v3.8.0</li>
-<li><a href="https://github.com/Dotown/hexo-theme-next" target="_blank" rel="noopener">next  v.7.1.0</a></li>
-</ul>
-</blockquote>
-<p> 除了以上环境之外，还需要一个github账号。</p>
-<h2 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h2><h3 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h3><p>选择本地电脑的某个空文件夹作为存放代码的地方，右击<code>Git Bash Here</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init  <span class="comment">#新建网站</span></span><br><span class="line">$ hexo g  <span class="comment">#生成静态文件</span></span><br><span class="line">$ hexo s  <span class="comment">#部署网站</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>PS：hexo指令请挪步<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">这里</a></p>
-</blockquote>
-<p>访问<code>http://localhost:4000/</code>，即可看到默认的博客配置。</p>
-<h3 id="github仓库"><a href="#github仓库" class="headerlink" title="github仓库"></a>github仓库</h3><p>新建一个名为<code>username.github.io</code>的仓库（username是你的用户名），同时，博客地址也是<code>username.github.io</code>。</p>
-<h3 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h3><p>本地仓库和远程仓库要建立连接，才能把本地的博客代码文件上传到远程仓库。因此用GitHub提供的ssh key来达到安全传输的目的。</p>
-<p>1.安装<code>hexo-deployer-git</code>插件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>2.末尾添加<strong>博客配置文件</strong>（博客目录下的_config.yml）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io.git</span><br><span class="line">  message: master</span><br></pre></td></tr></table></figure>
-<p>2.用git bash执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/. ssh <span class="comment">#检查本机已存在的ssh密钥</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"邮件地址"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="XMLHTTPRequest"><a href="#XMLHTTPRequest" class="headerlink" title="XMLHTTPRequest"></a>XMLHTTPRequest</h2><h4 id="open-method-url-async"><a href="#open-method-url-async" class="headerlink" title="open(method,url,async)"></a>open(method,url,async)</h4><p>method：规定请求的类型；url：文件在服务器上的位置；async：true(异步)或false(同步)</p>
+<h4 id="setRequestHeader-header-value"><a href="#setRequestHeader-header-value" class="headerlink" title="setRequestHeader(header,value)"></a>setRequestHeader(header,value)</h4><p>herder：规定头的名称；value：规定头的值将请求发送到服务器</p>
+<h4 id="onreadystatechange"><a href="#onreadystatechange" class="headerlink" title="onreadystatechange"></a>onreadystatechange</h4><p>该属性用来指定xhr对象状态改变时的时间函数</p>
+<p>当readyState改变时，调用一次该函数</p>
+<h4 id="send-string"><a href="#send-string" class="headerlink" title="send(string)"></a>send(string)</h4><p>string：仅用于POST请求</p>
+<h4 id="xmlhttp-readyState"><a href="#xmlhttp-readyState" class="headerlink" title="xmlhttp.readyState"></a>xmlhttp.readyState</h4><p>0：xhr对象还没完成初始化；</p>
+<p>1：xhr对象开始发送请求；</p>
+<p>2：xhr对象的请求发送完成；</p>
+<p>3：xhr对象开始读取服务器的相应；</p>
+<p>4：xhr对象读取服务器响应结束。</p>
+<h4 id="xmlhttp-status"><a href="#xmlhttp-status" class="headerlink" title="xmlhttp.status"></a>xmlhttp.status</h4><p>状态码 F12抓包可以查看具体的</p>
+<h4 id="xmlhttp-respenseText"><a href="#xmlhttp-respenseText" class="headerlink" title="xmlhttp.respenseText"></a>xmlhttp.respenseText</h4><p>  xmlhttp.setRequestHeader(“Content-type”,”application/x-www-form-urlencoded”);</p>
+<p>返回的信息</p>
+<h4 id="PS："><a href="#PS：" class="headerlink" title="PS："></a>PS：</h4><p>var xmlhttp;<br>if (window.XMLHttpRequest)<br>{<br>    //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码<br>    xmlhttp=new XMLHttpRequest();<br>}<br>else<br>{<br>    // IE6, IE5 浏览器执行代码<br>    xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>}</p>
+<h4 id="一个网页有多个ajax请求时"><a href="#一个网页有多个ajax请求时" class="headerlink" title="一个网页有多个ajax请求时"></a>一个网页有多个ajax请求时</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xmlhttp;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadXMLDoc</span>(<span class="params">url,cfunc</span>)  //该网页所有<span class="title">ajax</span>都通过该函数完成</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">xmlhttp.onreadystatechange=cfunc; </span><br><span class="line">xmlhttp.open(<span class="string">"GET"</span>,url,<span class="literal">true</span>);</span><br><span class="line">xmlhttp.send();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	loadXMLDoc(<span class="string">"/try/ajax/ajax_info.txt"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (xmlhttp.readyState==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xmlhttp.responseText;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>eg:<a href="https://www.runoob.com/php/php-ajax-database.html" target="_blank" rel="noopener">https://www.runoob.com/php/php-ajax-database.html</a></p>
 
       
     </div>
@@ -514,8 +499,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/15/DNF价格记录/" rel="next" title="春节记录">
-                <i class="fa fa-chevron-left"></i> 春节记录
+              <a href="/2019/07/04/天长地久/" rel="next" title="地久天长">
+                <i class="fa fa-chevron-left"></i> 地久天长
               </a>
             
           </div>
@@ -524,8 +509,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/07/Vue使用教程/" rel="prev" title="Vue使用教程(持续更新)">
-                Vue使用教程(持续更新) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/29/jQuery/" rel="prev" title="jQuery日常使用填坑">
+                jQuery日常使用填坑 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -720,7 +705,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客搭建"><span class="nav-number">2.</span> <span class="nav-text">博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地仓库"><span class="nav-number">2.1.</span> <span class="nav-text">本地仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github仓库"><span class="nav-number">2.2.</span> <span class="nav-text">github仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立连接"><span class="nav-number">2.3.</span> <span class="nav-text">建立连接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#XMLHTTPRequest"><span class="nav-number">1.</span> <span class="nav-text">XMLHTTPRequest</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#open-method-url-async"><span class="nav-number">1.0.1.</span> <span class="nav-text">open(method,url,async)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#setRequestHeader-header-value"><span class="nav-number">1.0.2.</span> <span class="nav-text">setRequestHeader(header,value)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#onreadystatechange"><span class="nav-number">1.0.3.</span> <span class="nav-text">onreadystatechange</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#send-string"><span class="nav-number">1.0.4.</span> <span class="nav-text">send(string)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#xmlhttp-readyState"><span class="nav-number">1.0.5.</span> <span class="nav-text">xmlhttp.readyState</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#xmlhttp-status"><span class="nav-number">1.0.6.</span> <span class="nav-text">xmlhttp.status</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#xmlhttp-respenseText"><span class="nav-number">1.0.7.</span> <span class="nav-text">xmlhttp.respenseText</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PS："><span class="nav-number">1.0.8.</span> <span class="nav-text">PS：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个网页有多个ajax请求时"><span class="nav-number">1.0.9.</span> <span class="nav-text">一个网页有多个ajax请求时</span></a></li></ol></li></ol></div>
             
 
           </div>
