@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Dotown&#39;s Blog">
 <meta property="og:description" content="记录SSR的搭建过程及简单配置">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-24T15:17:44.615Z">
+<meta property="og:updated_time" content="2019-11-07T03:42:44.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ShadowsocksR搭建记录">
 <meta name="twitter:description" content="记录SSR的搭建过程及简单配置">
@@ -419,7 +419,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.6k</span>
+                <span title="本文字数">2.4k</span>
               
 
               
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">4 分钟</span>
+                <span title="阅读时长">6 分钟</span>
               
             </div>
           
@@ -464,7 +464,7 @@
 <h2 id="租用VPS服务器"><a href="#租用VPS服务器" class="headerlink" title="租用VPS服务器"></a>租用VPS服务器</h2><p>笔者这里以<a href="https://www.vultr.com/?ref=7981852" target="_blank" rel="noopener">vulter</a>为例：</p>
 <p>1.注册账号；</p>
 <p>2.充值（Billing）余额，最低充值10刀，支持<strong>palpay或支付</strong>；</p>
-<p>3.选择服务器，系统记得选择<strong>centos6</strong>（centos7默认的防火墙可能会干扰SSR的正常连接），付款即可。（vultr是按分钟收费，所以网速过慢或者IP被墙可以直接destroy然后再deploy）;</p>
+<p>3.选择服务器，系统记得选择<strong>centos6</strong>（centos7默认的防火墙可能会干扰SSR的正常连接，<em>centos8亲测无法启动ssr</em>），付款即可。（vultr是按分钟收费，所以网速过慢或者IP被墙可以直接destroy然后再deploy）;</p>
 <h2 id="使用服务器-bash-ssr-sh"><a href="#使用服务器-bash-ssr-sh" class="headerlink" title="使用服务器(bash ssr.sh)"></a>使用服务器(bash ssr.sh)</h2><p>1.获取所租服务器的 IP address和Password</p>
 <p>2.打开Xshell-&gt;文件-&gt;新建，名称随遍，主机填VPS服务器的IP，端口号默认22。</p>
 <p>3.如果连接成功，则用户名为root密码为服务器提供的Password。如果连接失败，则意味着此IP无法连接，需要更换，即重复租服务器的步骤。</p>
@@ -474,8 +474,27 @@
 <p>5.安装Shadowsocks（数字1）</p>
 <p>6.设置端口（理论上40-65535，建议一些特殊端口<strong>80,143,443,1433,3306,3389,8000,8080</strong>）;设置密码；设置加密方式（早期版本不支持aes-128-cft8等建议1-9）；设置协议插件；设置混淆插件（建议<strong>plain</strong>；tls 1.2_ticket_auth容易受到干扰，选择除tls开头以外的其他混淆!）；设置端口连接数量；设置连接速度（默认就可以）</p>
 <h2 id="设置加速"><a href="#设置加速" class="headerlink" title="设置加速"></a>设置加速</h2><p>作者使用的是Google BBR加速，vultr可以装BBR加速，并且提升很大。</p>
-<h3 id="1-安装服务框架"><a href="#1-安装服务框架" class="headerlink" title="1.安装服务框架"></a>1.安装服务框架</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
-<h3 id="2-部署完成后输入y或者rebot重启服务器"><a href="#2-部署完成后输入y或者rebot重启服务器" class="headerlink" title="2.部署完成后输入y或者rebot重启服务器"></a>2.部署完成后输入y或者rebot重启服务器</h3><h2 id="SSR配置和日常使用"><a href="#SSR配置和日常使用" class="headerlink" title="SSR配置和日常使用"></a>SSR配置和日常使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash ssr.sh</span><br></pre></td></tr></table></figure>
+<h3 id="1-安装服务框架"><a href="#1-安装服务框架" class="headerlink" title="1.安装服务框架"></a>1.安装服务框架</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh chmod +x bbr.sh ./bbr.sh</span><br></pre></td></tr></table></figure>
+<h3 id="2-部署完成后输入y或者rebot重启服务器"><a href="#2-部署完成后输入y或者rebot重启服务器" class="headerlink" title="2.部署完成后输入y或者rebot重启服务器"></a>2.部署完成后输入y或者rebot重启服务器</h3><h2 id="防火墙设置"><a href="#防火墙设置" class="headerlink" title="防火墙设置"></a>防火墙设置</h2><p>centos6与centos7及以上采用的防火墙不一样，因此其防火墙设置也略有不同。</p>
+<h3 id="1-Centos6-iptables防火墙"><a href="#1-Centos6-iptables防火墙" class="headerlink" title="1.Centos6-iptables防火墙"></a>1.Centos6-iptables防火墙</h3><h4 id="防火墙设置-1"><a href="#防火墙设置-1" class="headerlink" title="防火墙设置"></a>防火墙设置</h4><p>重新启动防火墙：<code>service iptables restart</code></p>
+<p>开启防火墙（重启后永久生效）：<code>chkconfig iptables on</code></p>
+<p>关闭防火墙（重启后永久生效）：<code>chkconfig iptables off</code></p>
+<p>开启防火墙（即式生效，重启后失效）：<code>service iptables start</code></p>
+<p>关闭防火墙（即式生效，重启后失效）：`service iptables stop</p>
+<h4 id="端口号设置"><a href="#端口号设置" class="headerlink" title="端口号设置"></a>端口号设置</h4><p>查看防火墙开放的端口号：<code>iptables -L -n</code></p>
+<p>开放80端口号：<code>iptables -I INPUT -p tcp --dport 80 -j ACCEPT</code></p>
+<p>保存开启的端口号：<code>service iptables save</code></p>
+<p>通过修改配置文件开启端口号<code>vi /etc/sysconfig/iptables</code>，添加的规则为：<code>-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT</code></p>
+<blockquote>
+<p>参数说明:</p>
+<p>–A 参数就看成是添加一条规则<br>–p 指定是什么协议，我们常用的tcp 协议，当然也有udp，例如53端口的DNS<br>–dport 就是目标端口，当数据从外部进入服务器为目标端口<br>–sport 数据从服务器出去，则为数据源端口使用<br>–j 就是指定是 ACCEPT -接收 或者 DROP 不接收</p>
+</blockquote>
+<h3 id="2-Centos7-firewalld防火墙"><a href="#2-Centos7-firewalld防火墙" class="headerlink" title="2.Centos7-firewalld防火墙"></a>2.Centos7-firewalld防火墙</h3><h4 id="防火墙设置-2"><a href="#防火墙设置-2" class="headerlink" title="防火墙设置"></a>防火墙设置</h4><p>重新启动防火墙：<code>firewall-cmd --reload</code></p>
+<p>启动防火墙：<code>systemctl start firewalld</code></p>
+<p>禁用防火墙（重启后永久生效）：<code>systemctl stop firewalld</code></p>
+<p>设置开机启动：<code>systemctl enable firewalld</code></p>
+<p>停用并禁止开启启动：<code>sytemctl disable firewalld</code></p>
+<h2 id="SSR配置和日常使用"><a href="#SSR配置和日常使用" class="headerlink" title="SSR配置和日常使用"></a>SSR配置和日常使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash ssr.sh</span><br></pre></td></tr></table></figure>
 <p>进入详细的ssr设置</p>
 <p>PS：以下是官方提供的相关信息，大家可以逐个进行测试（建议每个机房测试三次），选出最适合自己的。如果你使用的 Windows 系统，并且不太清楚怎么测试，可以使用测试脚本进行测试。</p>
 <p><a href="http://hnd-jp-ping.vultr.com/" target="_blank" rel="noopener">日本东京</a> 108.61.201.151</p>
@@ -606,7 +625,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -627,7 +646,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -729,7 +754,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工具"><span class="nav-number">1.</span> <span class="nav-text">准备工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载SSR客户端"><span class="nav-number">1.1.</span> <span class="nav-text">1.下载SSR客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-下载Xshell"><span class="nav-number">1.2.</span> <span class="nav-text">2.下载Xshell</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#租用VPS服务器"><span class="nav-number">2.</span> <span class="nav-text">租用VPS服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用服务器-bash-ssr-sh"><span class="nav-number">3.</span> <span class="nav-text">使用服务器(bash ssr.sh)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置加速"><span class="nav-number">4.</span> <span class="nav-text">设置加速</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装服务框架"><span class="nav-number">4.1.</span> <span class="nav-text">1.安装服务框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-部署完成后输入y或者rebot重启服务器"><span class="nav-number">4.2.</span> <span class="nav-text">2.部署完成后输入y或者rebot重启服务器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSR配置和日常使用"><span class="nav-number">5.</span> <span class="nav-text">SSR配置和日常使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工具"><span class="nav-number">1.</span> <span class="nav-text">准备工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载SSR客户端"><span class="nav-number">1.1.</span> <span class="nav-text">1.下载SSR客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-下载Xshell"><span class="nav-number">1.2.</span> <span class="nav-text">2.下载Xshell</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#租用VPS服务器"><span class="nav-number">2.</span> <span class="nav-text">租用VPS服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用服务器-bash-ssr-sh"><span class="nav-number">3.</span> <span class="nav-text">使用服务器(bash ssr.sh)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置加速"><span class="nav-number">4.</span> <span class="nav-text">设置加速</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装服务框架"><span class="nav-number">4.1.</span> <span class="nav-text">1.安装服务框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-部署完成后输入y或者rebot重启服务器"><span class="nav-number">4.2.</span> <span class="nav-text">2.部署完成后输入y或者rebot重启服务器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#防火墙设置"><span class="nav-number">5.</span> <span class="nav-text">防火墙设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Centos6-iptables防火墙"><span class="nav-number">5.1.</span> <span class="nav-text">1.Centos6-iptables防火墙</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#防火墙设置-1"><span class="nav-number">5.1.1.</span> <span class="nav-text">防火墙设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#端口号设置"><span class="nav-number">5.1.2.</span> <span class="nav-text">端口号设置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Centos7-firewalld防火墙"><span class="nav-number">5.2.</span> <span class="nav-text">2.Centos7-firewalld防火墙</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#防火墙设置-2"><span class="nav-number">5.2.1.</span> <span class="nav-text">防火墙设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSR配置和日常使用"><span class="nav-number">6.</span> <span class="nav-text">SSR配置和日常使用</span></a></li></ol></div>
             
 
           </div>
@@ -762,7 +787,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">58k</span>
+    <span title="站点总字数">60k</span>
   
 
   
@@ -771,7 +796,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">2:24</span>
+    <span title="站点阅读时长">2:30</span>
   
 </div>
 

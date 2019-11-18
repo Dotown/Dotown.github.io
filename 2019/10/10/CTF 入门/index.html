@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="记博客搭建历程">
+  <meta name="description" content="新的坑  题型1.MISC:杂项；2.PPC:编程类；3.CRYPTO:加密方式；4.REVERSE:逆向；5.PWN:基于程序的逻辑分析；6.WEB:web狗 Web主要知识点常用工具Chrome/Firefox（抓包）、BurpSuite、Postman（发包）、Putty（攻防连接）、PyCharm/PHPStorm（代码工具） 扫描器：AWVS、sqlmap 分类代码审计、弱类型、暴力、">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用GitHub+hexo博客搭建及使用指南">
-<meta property="og:url" content="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/index.html">
+<meta property="og:title" content="CTF题型汇总">
+<meta property="og:url" content="http://yoursite.com/2019/10/10/CTF 入门/index.html">
 <meta property="og:site_name" content="Dotown&#39;s Blog">
-<meta property="og:description" content="记博客搭建历程">
+<meta property="og:description" content="新的坑  题型1.MISC:杂项；2.PPC:编程类；3.CRYPTO:加密方式；4.REVERSE:逆向；5.PWN:基于程序的逻辑分析；6.WEB:web狗 Web主要知识点常用工具Chrome/Firefox（抓包）、BurpSuite、Postman（发包）、Putty（攻防连接）、PyCharm/PHPStorm（代码工具） 扫描器：AWVS、sqlmap 分类代码审计、弱类型、暴力、">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-24T16:54:29.976Z">
+<meta property="og:updated_time" content="2019-11-05T15:56:02.710Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用GitHub+hexo博客搭建及使用指南">
-<meta name="twitter:description" content="记博客搭建历程">
+<meta name="twitter:title" content="CTF题型汇总">
+<meta name="twitter:description" content="新的坑  题型1.MISC:杂项；2.PPC:编程类；3.CRYPTO:加密方式；4.REVERSE:逆向；5.PWN:基于程序的逻辑分析；6.WEB:web狗 Web主要知识点常用工具Chrome/Firefox（抓包）、BurpSuite、Postman（发包）、Putty（攻防连接）、PyCharm/PHPStorm（代码工具） 扫描器：AWVS、sqlmap 分类代码审计、弱类型、暴力、">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/10/CTF 入门/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>用GitHub+hexo博客搭建及使用指南 | Dotown's Blog</title>
+  <title>CTF题型汇总 | Dotown's Blog</title>
   
 
 
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/24/用GitHub-hexo博客搭建及使用指南/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/10/CTF 入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dotown">
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用GitHub+hexo博客搭建及使用指南
+          <h1 class="post-title" itemprop="name headline">CTF题型汇总
 
               
             
@@ -365,7 +365,7 @@
                 
               
 
-              <time title="创建时间：2019-04-24 23:20:35" itemprop="dateCreated datePublished" datetime="2019-04-24T23:20:35+08:00">2019-04-24</time>
+              <time title="创建时间：2019-10-10 00:00:00" itemprop="dateCreated datePublished" datetime="2019-10-10T00:00:00+08:00">2019-10-10</time>
             
 
             
@@ -383,7 +383,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教程/" itemprop="url" rel="index"><span itemprop="name">教程</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a></span>
 
                 
                 
@@ -419,7 +419,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">710</span>
+                <span title="本文字数">1.5k</span>
               
 
               
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -454,36 +454,37 @@
 
       
         <blockquote>
-<p>记博客搭建历程</p>
+<p>新的坑</p>
 </blockquote>
-<a id="more"></a>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote>
-<p> <strong>环境：</strong></p>
-<ul>
-<li>Window10</li>
-<li>node  v10.11.0</li>
-</ul>
-<ul>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">git  v2.21.0</a></li>
-<li>hexo  v3.8.0</li>
-<li><a href="https://github.com/Dotown/hexo-theme-next" target="_blank" rel="noopener">next  v.7.1.0</a></li>
-</ul>
-</blockquote>
-<p> 除了以上环境之外，还需要一个github账号。</p>
-<h2 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h2><h3 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h3><p>选择本地电脑的某个空文件夹作为存放代码的地方，右击<code>Git Bash Here</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init  <span class="comment">#新建网站</span></span><br><span class="line">$ hexo g  <span class="comment">#生成静态文件</span></span><br><span class="line">$ hexo s  <span class="comment">#部署网站</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>PS：hexo指令请挪步<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">这里</a></p>
-</blockquote>
-<p>访问<code>http://localhost:4000/</code>，即可看到默认的博客配置。</p>
-<h3 id="github仓库"><a href="#github仓库" class="headerlink" title="github仓库"></a>github仓库</h3><p>新建一个名为<code>username.github.io</code>的仓库（username是你的用户名），同时，博客地址也是<code>username.github.io</code>。</p>
-<h3 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h3><p>本地仓库和远程仓库要建立连接，才能把本地的博客代码文件上传到远程仓库。因此用GitHub提供的ssh key来达到安全传输的目的。</p>
-<p>1.安装<code>hexo-deployer-git</code>插件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>2.末尾添加<strong>博客配置文件</strong>（博客目录下的_config.yml）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io.git</span><br><span class="line">  message: master</span><br></pre></td></tr></table></figure>
-<p>2.用git bash执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/. ssh <span class="comment">#检查本机已存在的ssh密钥</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"邮件地址"</span></span><br></pre></td></tr></table></figure>
+<h3 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h3><p>1.MISC:杂项；2.PPC:编程类；3.CRYPTO:加密方式；4.REVERSE:逆向；5.PWN:基于程序的逻辑分析；6.WEB:web狗</p>
+<h2 id="Web主要知识点"><a href="#Web主要知识点" class="headerlink" title="Web主要知识点"></a>Web主要知识点</h2><h3 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h3><p>Chrome/Firefox（抓包）、BurpSuite、Postman（发包）、Putty（攻防连接）、PyCharm/PHPStorm（代码工具）</p>
+<p>扫描器：AWVS、sqlmap</p>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p>代码审计、弱类型、暴力、命令执行、SQL注入、XSS、逻辑漏洞、文件上传、文件包含</p>
+<h4 id="代码审计"><a href="#代码审计" class="headerlink" title="代码审计"></a>代码审计</h4><h2 id="PWN（360）"><a href="#PWN（360）" class="headerlink" title="PWN（360）"></a>PWN（360）</h2><h3 id="分类-1"><a href="#分类-1" class="headerlink" title="分类"></a>分类</h3><p>Linux libc pwn、虚拟机pwn、浏览器pwn、Linux内核pwn</p>
+<h4 id="Linux-libc-pwn"><a href="#Linux-libc-pwn" class="headerlink" title="Linux libc pwn"></a>Linux libc pwn</h4><p>栈溢出类型、格式化字符串类型、堆相关类型、整形溢出类型、FILE结构体利用类型、条件竞争类型</p>
+<h5 id="栈溢出类型"><a href="#栈溢出类型" class="headerlink" title="栈溢出类型"></a>栈溢出类型</h5><p><strong>前提</strong>：程序必须向栈上写入数据；写入的数据大小没有被良好地控制。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> buf[<span class="number">0</span>*<span class="number">10</span>];</span><br><span class="line">...</span><br><span class="line">read(<span class="number">0</span>,buf,<span class="number">0</span>*<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+<p>1.Ret2shellcode</p>
+<p>2.NX保护开启，则使用ROP技术。</p>
+<p><strong>流程</strong>：</p>
+<p>1.先定位可以栈溢出的函数；2.确定栈溢出的长度；3.确定保护机制（是否开启canary、NX）</p>
+<p>进阶：ret2syscall、ret2libc、ret2_dl_runtime_resolve、BROP、SROP。</p>
+<h5 id="格式化字符串"><a href="#格式化字符串" class="headerlink" title="格式化字符串"></a>格式化字符串</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">read(<span class="number">0</span>,buf,<span class="number">0</span>*<span class="number">100</span>);</span><br><span class="line">...</span><br><span class="line"><span class="built_in">printf</span>(buf);</span><br></pre></td></tr></table></figure>
+<p><strong>流程</strong>：</p>
+<p>1.先找到printf、fprintf、sprintf、snprintf等格式化字符串函数；2.看其中是否有格式化字符串参数，从而判断是否存在格式化字符串漏洞（自动化检测工具lazyIDA）；3.确定使用该漏洞是进行信息泄露还是内存写入（%n、%hn、%hhn）；4.确定信息泄露或者内存写入的目标地址所在的参数偏移位置，利用%order$s、%order$n进行调整；5确定保护机制是否开启RELRO保护。（若没有开启，则用其覆写劫持GOT表；若开启，则用其覆写劫持返回地址）</p>
+<h5 id="堆相关类型"><a href="#堆相关类型" class="headerlink" title="堆相关类型"></a>堆相关类型</h5><p>由低地址向高地址增长。</p>
+<p>Linux的堆分配器是glibc中的ptmalloc2，通过malloc/free函数来分配和释放内存块。</p>
+<p><strong>利用</strong>：</p>
+<p>覆盖与其物理相邻的下一个chunk的内容。利用堆中的机制（如unlink等）实现任意地址写入或控制堆块中的内容等效果，从而来控制程序的执行流。</p>
+<p>UAF：Use After Free。内存块被释放后，对应的指针没有被设置为NULL，在它下一次使用之前，对这段代码进行修改，那么当程序再使用这块内存，就会被执行修改后的代码。</p>
+<p><strong>流程</strong>：</p>
+<p>1.先跟踪程序中某一堆块的申请、使用、释放的过程；2.仔细分析堆块mem区域的数据（是否有函数指针等）；3.搞清楚程序中对于堆块的管理方式；4.先找到对于堆块的写入有没有溢出；5.看释放堆块的函数中是否有UAF；6.采用对应的利用方法去利用。</p>
+<p><strong>进阶</strong>：Off-By-One、Overlapping、unlink、Fastbin Attack、Unsorted Bin Attack、Tcache Attack、House Of Force、House Of Force、House Of Lore、House Of Orange、House Of Roman。</p>
+<h5 id="整形溢出类型"><a href="#整形溢出类型" class="headerlink" title="整形溢出类型"></a>整形溢出类型</h5><p>宽度溢出、算数溢出、符号溢出</p>
+<h5 id="FILE结构体利用类型"><a href="#FILE结构体利用类型" class="headerlink" title="FILE结构体利用类型"></a>FILE结构体利用类型</h5><p>伪造FILE结构体，修改vtable</p>
+<h3 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h3><p><code>空格</code>:%20;  <code>&#39;</code>:%27; <code>#</code>:%23;<code>\</code>:%5C</p>
+<h3 id="AD考点"><a href="#AD考点" class="headerlink" title="AD考点"></a>AD考点</h3><p><strong>WEB</strong>：命令执行、文件包含、sql注入、文件上传、一定不会有xss，csrf，ssrf。</p>
+<p><strong>PWN</strong>：命令执行、栈溢出、格式化字符串、堆</p>
 
       
     </div>
@@ -514,8 +515,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/15/DNF价格记录/" rel="next" title="春节记录">
-                <i class="fa fa-chevron-left"></i> 春节记录
+              <a href="/2019/08/31/百度API/" rel="next" title="百度API使用填坑">
+                <i class="fa fa-chevron-left"></i> 百度API使用填坑
               </a>
             
           </div>
@@ -524,8 +525,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/07/Vue使用教程/" rel="prev" title="Vue使用教程(持续更新)">
-                Vue使用教程(持续更新) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/23/360_WEB/" rel="prev" title="360攻防课程之WEB">
+                360攻防课程之WEB <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -726,7 +727,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客搭建"><span class="nav-number">2.</span> <span class="nav-text">博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地仓库"><span class="nav-number">2.1.</span> <span class="nav-text">本地仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github仓库"><span class="nav-number">2.2.</span> <span class="nav-text">github仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立连接"><span class="nav-number">2.3.</span> <span class="nav-text">建立连接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题型"><span class="nav-number">1.</span> <span class="nav-text">题型</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Web主要知识点"><span class="nav-number"></span> <span class="nav-text">Web主要知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用工具"><span class="nav-number">1.</span> <span class="nav-text">常用工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">2.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码审计"><span class="nav-number">2.1.</span> <span class="nav-text">代码审计</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PWN（360）"><span class="nav-number"></span> <span class="nav-text">PWN（360）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类-1"><span class="nav-number">1.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux-libc-pwn"><span class="nav-number">1.1.</span> <span class="nav-text">Linux libc pwn</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#栈溢出类型"><span class="nav-number">1.1.1.</span> <span class="nav-text">栈溢出类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#格式化字符串"><span class="nav-number">1.1.2.</span> <span class="nav-text">格式化字符串</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#堆相关类型"><span class="nav-number">1.1.3.</span> <span class="nav-text">堆相关类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#整形溢出类型"><span class="nav-number">1.1.4.</span> <span class="nav-text">整形溢出类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#FILE结构体利用类型"><span class="nav-number">1.1.5.</span> <span class="nav-text">FILE结构体利用类型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL注入"><span class="nav-number">2.</span> <span class="nav-text">SQL注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AD考点"><span class="nav-number">3.</span> <span class="nav-text">AD考点</span></a></li></ol></li></div>
             
 
           </div>
