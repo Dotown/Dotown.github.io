@@ -103,19 +103,19 @@
 <meta property="og:site_name" content="Dotown&#39;s Blog">
 <meta property="og:description" content="1.打开网站192.168.1.240，可以进入，则靶机配置正确； 2.浏览网页，发现网页最底端有后台管理接口；  通过御剑扫描该网站，也可以发现192.168.1.240/admin，即为该网站的后台管理接口；  3.尝试使用admin/123456或者test/123456登陆，成功登陆（弱口令）； 4.浏览后台，发现在数据更新处有一个flag，也可以通过chrome开发者模式一边浏览，一边查">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://dotown.github.io/.com//管理接口.png">
-<meta property="og:image" content="https://dotown.github.io/.com//御剑扫描.png">
-<meta property="og:image" content="https://dotown.github.io/.com//flag1.png">
-<meta property="og:image" content="https://dotown.github.io/.com//sql接口.png">
-<meta property="og:image" content="https://dotown.github.io/.com//蚁剑添加.png">
-<meta property="og:image" content="https://dotown.github.io/.com//flag23.png">
-<meta property="og:image" content="https://dotown.github.io/.com//5flag.png">
-<meta property="og:image" content="https://dotown.github.io/.com//flag4.png">
+<meta property="og:image" content="https://dotown.github.io/2019/11/23/第一个靶机/管理接口.png">
+<meta property="og:image" content="https://dotown.github.io/2019/11/23/第一个靶机/御剑扫描.png">
+<meta property="og:image" content="https://dotown.github.io/2019/11/23/第一个靶机/flag1.png">
+<meta property="og:image" content="https://dotown.github.io/2019/11/23/第一个靶机/sql接口.png">
+<meta property="og:image" content="https://dotown.github.io/2019/11/23/第一个靶机/蚁剑添加.png">
+<meta property="og:image" content="https://dotown.github.io/2019/11/23/第一个靶机/flag23.png">
+<meta property="og:image" content="https://dotown.github.io/2019/11/23/第一个靶机/5flag.png">
+<meta property="og:image" content="https://dotown.github.io/2019/11/23/第一个靶机/flag4.png">
 <meta property="og:updated_time" content="2019-11-25T14:26:57.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一个靶机">
 <meta name="twitter:description" content="1.打开网站192.168.1.240，可以进入，则靶机配置正确； 2.浏览网页，发现网页最底端有后台管理接口；  通过御剑扫描该网站，也可以发现192.168.1.240/admin，即为该网站的后台管理接口；  3.尝试使用admin/123456或者test/123456登陆，成功登陆（弱口令）； 4.浏览后台，发现在数据更新处有一个flag，也可以通过chrome开发者模式一边浏览，一边查">
-<meta name="twitter:image" content="https://dotown.github.io/.com//管理接口.png">
+<meta name="twitter:image" content="https://dotown.github.io/2019/11/23/第一个靶机/管理接口.png">
 
 
 
@@ -464,24 +464,24 @@
       
         <p>1.打开网站192.168.1.240，可以进入，则靶机配置正确；</p>
 <p>2.浏览网页，发现网页最底端有后台管理接口；</p>
-<p><img src="/.com//管理接口.png" alt="管理接口"></p>
+<p><img src="//dotown.github.io/2019/11/23/第一个靶机/管理接口.png" alt="管理接口"></p>
 <p>通过御剑扫描该网站，也可以发现<code>192.168.1.240/admin</code>，即为该网站的后台管理接口；</p>
-<p><img src="/.com//御剑扫描.png" alt="御剑扫描"></p>
+<p><img src="//dotown.github.io/2019/11/23/第一个靶机/御剑扫描.png" alt="御剑扫描"></p>
 <p>3.尝试使用admin/123456或者test/123456登陆，成功登陆（弱口令）；</p>
 <p>4.浏览后台，发现在数据更新处有一个flag，也可以通过chrome开发者模式一边浏览，一边查找flag；</p>
-<p><img src="/.com//flag1.png" alt="flag1"></p>
+<p><img src="//dotown.github.io/2019/11/23/第一个靶机/flag1.png" alt="flag1"></p>
 <p>5.发现系统-&gt;备份与恢复数据处可以执行SQL语句，则可以上传一句话木马：</p>
 <p><code>select &#39;&lt;要执行的语句&gt;&#39;INTO OUTFILE &#39;D:/www/www.php&#39;</code>，</p>
 <p>关于一句话木马的原理和使用，可以<a href="https://www.jianshu.com/p/90473b8e6667" target="_blank" rel="noopener">参考</a>；</p>
-<p><img src="/.com//sql接口.png" alt="sql接口"></p>
+<p><img src="//dotown.github.io/2019/11/23/第一个靶机/sql接口.png" alt="sql接口"></p>
 <p>6.使用中国蚁剑工具，通过添加数据连接至该靶机系统；</p>
-<p><img src="/.com//蚁剑添加.png" alt="蚁剑添加"></p>
+<p><img src="//dotown.github.io/2019/11/23/第一个靶机/蚁剑添加.png" alt="蚁剑添加"></p>
 <p>7.通过浏览该系统文件，发现C盘下admin.txt以及user.txt处存在flag，此时三个flag均已经找出；</p>
-<p><img src="/.com//flag23.png" alt="flag23"></p>
+<p><img src="//dotown.github.io/2019/11/23/第一个靶机/flag23.png" alt="flag23"></p>
 <p>PS：经过仔细查找该靶机系统文件，发现在C:/phpStudy4IIS/WWW/路径下的五个文件夹内均存在flag：</p>
-<p><img src="/.com//5flag.png" alt="5flag"></p>
+<p><img src="//dotown.github.io/2019/11/23/第一个靶机/5flag.png" alt="5flag"></p>
 <p>查看得到第四个flag：由于后第二三四个文件夹均出现乱码，暂时没有深入研究。 </p>
-<p><img src="/.com//flag4.png" alt="flag4"></p>
+<p><img src="//dotown.github.io/2019/11/23/第一个靶机/flag4.png" alt="flag4"></p>
 
       
     </div>
@@ -586,7 +586,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
