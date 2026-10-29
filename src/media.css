@@ -1,0 +1,83 @@
+/* Real project media and personal photographs. */
+.marquee-viewport{overflow:hidden}
+@media(prefers-reduced-motion:reduce){.marquee-viewport{overflow-x:auto}}
+.photo-figure{margin:0;min-width:0}
+.asset-slot>.photo-figure{width:100%;height:100%}
+.photo-open{display:block;position:relative;width:100%;height:100%;padding:0;border:0;background:#111214;color:#f3efeb;overflow:hidden;cursor:zoom-in}
+.photo-open img{display:block;width:100%;height:100%;object-position:center;transition:transform .35s ease}
+.photo-open:hover img{transform:scale(1.025)}
+.photo-open:focus-visible{outline:2px solid var(--rose);outline-offset:-4px}
+.photo-zoom{position:absolute;right:12px;bottom:12px;display:grid;place-items:center;width:32px;height:32px;border:1px solid #ffffff50;border-radius:50%;background:#0c0c0c90;color:#fff;pointer-events:none}
+.music-images .project-left{grid-template-rows:1fr 1fr}
+.music-images .asset-slot{background:#111214}
+
+
+
+
+.photo-dialog{width:min(1160px,94vw);max-width:94vw;max-height:92svh;margin:auto;padding:0;border:1px solid #854456;border-radius:20px;background:#101113;color:#e7dbe0;overflow:auto}
+.photo-dialog::backdrop{background:#000d;backdrop-filter:blur(8px)}
+.photo-dialog-content{position:relative;padding:50px 20px 18px}
+.photo-dialog-content>img{display:block;width:100%;height:auto;max-height:calc(90svh - 125px);object-fit:contain}
+.photo-dialog-content>p{margin:14px 0 0;text-align:center;font-size:13px;line-height:1.5;color:#c4b9c0}
+.photo-dialog-close{position:absolute;top:10px;right:12px;display:grid;place-items:center;width:34px;height:34px;border:1px solid #a16a79;border-radius:50%;background:#461421;color:#fff}
+@media(max-width:640px){.photo-zoom{width:28px;height:28px;right:9px;bottom:9px}.music-images{height:auto;grid-template-columns:1fr;gap:12px}.music-images>.project-main{grid-row:1;aspect-ratio:16/9;min-height:0}.music-images>.project-left{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:10px}.music-images .project-left>.asset-slot{aspect-ratio:4/3}.photo-dialog{border-radius:15px}.photo-dialog-content{padding:48px 10px 14px}.photo-dialog-content>p{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.photo-open img{transition:none}}
+
+/* Landscape performance photos: one lead image and two full group photos. */
+.music-stage{min-height:0;margin-bottom:55px}
+.music-stage .project-card{position:relative;top:0!important}
+.music-images{height:auto;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.music-images>.project-left{display:contents}
+.music-images>.project-main{grid-column:1/-1;grid-row:1;aspect-ratio:16/9}
+.music-images .project-left>.asset-slot{aspect-ratio:4/3}
+@media(max-width:640px){.music-images{gap:10px}.music-images>.project-main{grid-column:1/-1}.music-images .project-left>.asset-slot{min-height:0}.music-stage{margin-bottom:30px}}
+
+/* Community feature pairs two visit photos with the school portrait. */
+.community-images{grid-template-columns:3fr 2fr}
+.community-images .project-left{grid-template-rows:1fr 1fr}
+.community-images .asset-slot{background:#111214}
+@media(max-width:640px){.community-images{grid-template-columns:1fr 1fr;height:auto;gap:10px}.community-images .project-left{grid-template-rows:1fr 1fr;gap:10px}.community-images .project-left>.asset-slot{aspect-ratio:16/10;min-height:0}.community-images>.project-main{min-height:0}}
+.community-images>.project-left,.community-images>.project-main{min-height:0}
+.community-images .project-left{grid-template-rows:repeat(2,minmax(0,1fr))}
+.community-images .project-left>.asset-slot{min-height:0}
+
+/* Films lead each project; photos remain available to enlarge. */
+.video-stage{min-height:0;margin-bottom:55px}
+.video-stage .project-card{position:relative;top:0;transform:none}
+.project-film{margin:0;min-width:0;overflow:hidden;border:1px solid #73505a;border-radius:22px;background:#080809}
+.project-film video{display:block;width:100%;height:auto;object-fit:contain;background:#000;accent-color:var(--rose)}
+.project-film video:focus-visible{outline:2px solid var(--rose);outline-offset:-4px}
+.project-film figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;color:var(--rose);font-size:10px;letter-spacing:.14em}
+.project-film figcaption>span:first-child{display:flex;align-items:center;gap:9px}
+.project-film figcaption>span:last-child{color:#b4aab0;letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.project-media--community{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,315px);gap:22px;align-items:stretch}
+.project-media--community>.project-film{grid-column:2;grid-row:1}
+.project-media--community>.community-images{grid-column:1;grid-row:1;height:100%;gap:14px}
+.project-media--community .project-left{gap:14px}
+.project-film--community video{aspect-ratio:9/16}
+.project-media--music{display:grid;gap:18px}
+.project-film--music video{aspect-ratio:1270/720}
+.project-media--music>.music-images{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.project-media--music .music-images .asset-slot{aspect-ratio:4/3;min-height:0}
+.project-media--music .music-images>.project-main{grid-column:auto;grid-row:auto}
+.project-dialog .project-film{margin:24px auto}
+.project-dialog .project-film--community{max-width:315px}
+.project-film .film-error{padding:0 16px 16px;font-size:13px;color:#e7dbe0;line-height:1.6}
+.film-error a{text-decoration:underline;text-underline-offset:3px}
+@media(min-width:641px) and (max-width:900px){
+ .project-media--community{grid-template-columns:minmax(0,1fr) minmax(230px,.8fr);gap:14px}
+ .project-media--community>.community-images{grid-template-columns:1fr;grid-template-rows:1fr 1fr;gap:12px}
+ .project-media--community .project-left{grid-template-columns:1fr 1fr;grid-template-rows:1fr;gap:12px}
+}
+@media(max-width:640px){
+ .video-stage{margin-bottom:30px}
+ .project-film{border-radius:15px}
+ .project-film figcaption{font-size:8px;padding:12px;letter-spacing:.1em}
+ .project-media--community{grid-template-columns:1fr;gap:16px}
+ .project-media--community>.project-film{grid-column:1;grid-row:1;width:100%;max-width:315px;justify-self:center}
+ .project-media--community>.community-images{grid-column:1;grid-row:2;height:auto;gap:10px}
+ .project-media--community .project-left{gap:10px}
+ .project-media--music{gap:12px}
+ .project-media--music>.music-images{grid-template-columns:1fr 1fr;gap:10px}
+ .project-media--music .music-images>.project-main{grid-column:1/-1;aspect-ratio:16/9}
+}

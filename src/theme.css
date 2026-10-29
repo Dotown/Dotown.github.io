@@ -1,0 +1,34 @@
+/* Burgundy stage palette: dark surfaces, warm paper, restrained red accents. */
+:root{--wine:#701f32;--wine-dark:#461421;--rose:#d6a0ac;--paper:#f3efeb;--ink:#0c0c0c;--accent-line:#854456}
+::selection{background:var(--wine);color:#fff}
+button:focus-visible,a:focus-visible,.score-details summary:focus-visible{outline-color:var(--rose)}
+.hero{isolation:isolate}
+.hero::before{content:'';position:absolute;z-index:-1;pointer-events:none;left:15%;right:15%;top:25%;bottom:0;background:radial-gradient(ellipse at 50% 65%,#701f3245 0%,#46142125 35%,transparent 70%)}
+nav a{position:relative;transition:color .2s}
+nav a::after{content:'';position:absolute;height:2px;background:var(--rose);left:0;right:0;bottom:-7px;transform:scaleX(0);transform-origin:left;transition:transform .2s}
+nav a:hover{color:var(--rose);opacity:1}
+nav a:hover::after{transform:scaleX(1)}
+.contact-button{background:linear-gradient(125deg,#461421 0%,#8e2f48 48%,#701f32 78%,#461421 100%);box-shadow:0 7px 26px #701f3240,inset 0 1px 10px #cf829833;outline-color:#d6a0ac;transition:transform .2s,box-shadow .2s}
+.contact-button:hover{box-shadow:0 9px 32px #701f3270,inset 0 1px 10px #cf829850}
+.portrait-caption,.hero-eyebrow>span:first-child,.project-title .micro,.dialog-role{color:var(--rose)}
+.email:hover,footer .section-meta a:hover{color:#f2cbd4}
+.explorations{background:var(--paper)}
+.exploration-number,.explorations .section-meta{color:var(--wine)}
+.exploration-row{border-top-color:#701f322a}
+.exploration-row .tags{color:#7b4351}
+.project-number{color:var(--rose)}
+.project-card{border-color:#73505a;transition:border-color .25s}
+.project-card:hover{border-color:#be7488}
+.outline-button{border-color:#a16a79;color:#e8bdc8;transition:background .2s,border-color .2s}
+.outline-button:hover{background:#701f323d;border-color:var(--rose)}
+.project-dialog{border-color:#854456}
+.close-dialog{background:var(--wine-dark);color:#f6e6ea}
+footer{background:linear-gradient(135deg,#1c1014 0%,#111214 65%);border-top-color:#701f3250}
+@media(max-width:640px){.hero::before{left:0;right:0;top:30%;bottom:15%}}
+@media(prefers-reduced-motion:reduce){nav a::after{transition:none}}
+
+/* Keep the longer personal introduction comfortable to read. */
+.about-content{width:min(680px,calc(100% - 240px));max-width:680px}
+.about-copy{width:100%;max-width:none;text-align:left;font-size:clamp(18px,1.7vw,22px);line-height:1.75}
+.about-copy p+p{margin-top:1.25em}
+@media(max-width:640px){.about-content{width:100%}}
